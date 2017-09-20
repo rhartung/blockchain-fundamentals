@@ -1,7 +1,7 @@
 pragma solidity ^0.4.4;
 
 contract ScoreStore{
-    mapping(string +> int) PersonScores;
+    mapping(string => int) PersonScores;
     
     function AddPersonScore(string name, int startingScore){
 
@@ -10,7 +10,7 @@ contract ScoreStore{
             throw;
         }
         else{
-            PersonScore[name] = startingScore;
+            PersonScores[name] = startingScore;
          }
     }
 
